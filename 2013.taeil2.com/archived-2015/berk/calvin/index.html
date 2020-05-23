@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Calvin and Hobbes - Responsive Demo</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="css/calvin.css" />
+    <link href='http://fonts.googleapis.com/css?family=Boogaloo' rel='stylesheet' type='text/css'>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js" ></script>
+
+</head>
+
+<body>
+
+    <!-- Header -->
+    <div id="wrapper">
+        <div id="header">
+            <h1>Calvin and Hobbes - Responsive Demo</h1>
+            <!-- Display appropriate media query -->
+            <p id="viewingArea">
+                <span id="windowSize"></span>
+                <span id="frame4" class="frames"> 4 frames</span>
+                <span id="frame3" class="frames"> 3 frames</span>
+                <span id="frame2" class="frames"> 2 frames</span>
+                <span id="frame1" class="frames"> 1 frames</span>
+            </p>
+        </div>
+
+    <!-- Comic -->
+        <div id="comic">
+            <!-- First image is big if 3/4 frame. small if 1 or 2 frame. -->
+            <img class="image" id="bigImage" src="img/01.png"></img>
+            <img class="image" id="smallImage" src="img/01v2.png"></img>
+            <img class="image" src="img/02.png"></img>
+            <img class="image" src="img/03.png"></img>
+            <img class="image" src="img/04.png"></img>
+            <img class="image" src="img/05.png"></img>
+            <img class="image" src="img/06.png"></img>
+            <img class="image" src="img/07.png"></img>
+            <img class="image" src="img/08.png"></img>
+            <img class="image" src="img/09.png"></img>
+            <img class="image" src="img/10.png"></img>
+        </div>
+    </div>
+
+    <script>
+        $(document).ready(function(){
+            var winwidth = $(window).width().toString();
+            $('#windowSize').html(winwidth + " px,");
+        });
+        $(window).resize(function(){
+            var winwidth = $(window).width().toString();
+            $('#windowSize').html(winwidth + " px,");
+        });
+
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,268 @@
+/* Base stuff */
+
+html{
+	min-height:100%;
+	background-color: rgb(209,240,254); /* Old browsers */
+	background-color: -moz-linear-gradient(top,  rgba(209,240,254,1) 0%, rgba(237,244,247,1) 100%); /* FF3.6+ */
+	background-color: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(209,240,254,1)), color-stop(100%,rgba(237,244,247,1))); /* Chrome,Safari4+ */
+	background-color: -webkit-linear-gradient(top,  rgba(209,240,254,1) 0%,rgba(237,244,247,1) 100%); /* Chrome10+,Safari5.1+ */
+	background-color: -o-linear-gradient(top,  rgba(209,240,254,1) 0%,rgba(237,244,247,1) 100%); /* Opera 11.10+ */
+	background-color: -ms-linear-gradient(top,  rgba(209,240,254,1) 0%,rgba(237,244,247,1) 100%); /* IE10+ */
+	background-color: linear-gradient(to bottom,  rgba(209,240,254,1) 0%,rgba(237,244,247,1) 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d1f0fe', endColorstr='#edf4f7',GradientType=0 ); /* IE6-9 */
+
+	background-image:url('../img/leaves5001250.png');
+	background-repeat:no-repeat;
+	background-attachment:fixed;
+	background-position:top center; 
+}
+
+#bgleaves{
+	position:absolute;
+	left:800px;
+	z-index:-1;
+}
+
+body{
+	
+	width:960px;
+	padding:0;
+	margin:0 auto;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:11pt;
+	color:#555;
+}
+
+/* LOGO */
+
+#logo{
+	padding:20px 0 10px 20px;
+	float:left;
+	display:block;
+}
+
+/* NAVBAR */
+
+#navBar{
+	clear:both;
+	-moz-border-radius: 10px 10px 0 0;
+	border-radius: 10px 10px 0 0;
+	padding:0;
+	margin:0;
+	background: rgb(201,222,150); /* Old browsers */
+	background: -moz-linear-gradient(top,  rgba(201,222,150,1) 0%, rgba(138,182,107,1) 35%, rgba(57,130,53,1) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(201,222,150,1)), color-stop(35%,rgba(138,182,107,1)), color-stop(100%,rgba(57,130,53,1))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  rgba(201,222,150,1) 0%,rgba(138,182,107,1) 35%,rgba(57,130,53,1) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  rgba(201,222,150,1) 0%,rgba(138,182,107,1) 35%,rgba(57,130,53,1) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  rgba(201,222,150,1) 0%,rgba(138,182,107,1) 35%,rgba(57,130,53,1) 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  rgba(201,222,150,1) 0%,rgba(138,182,107,1) 35%,rgba(57,130,53,1) 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c9de96', endColorstr='#398235',GradientType=0 ); /* IE6-9 */
+	border:1px solid #75AD6F;
+	border-bottom:none;
+	-moz-box-shadow: 1px 1px 5px #BBB;
+	-webkit-box-shadow: 1px 1px 5px #BBB;
+	box-shadow: 1px 1px 5px #BBB;
+}
+
+#navBar ul{
+	padding:0;
+	margin:0;
+	list-style-type:none;
+}
+
+#navBar li{
+	display:inline;
+	
+}
+
+#navBar li a{
+	font-size:13pt;
+	padding:13px 25px;
+	display:inline-block;
+	border-right:1px solid #c9de96;
+}
+
+#navBar li a:link, #navBar li a:visited{
+	text-decoration:none;
+	color:#EEE;
+}
+#navBar li a:active, #navBar li a:hover{
+	text-decoration:none;
+	color:#666;
+}
+
+/* Content */
+
+#content{
+	padding:17px 20px;
+	margin-bottom:30px;
+	-moz-border-radius: 0 0 10px 10px;
+	border-radius: 0 0 10px 10px;
+	background-color:#fbfff8;
+	border:1px solid #BBB;
+	border-top:none;
+	-moz-box-shadow: 1px 1px 5px #BBB;
+	-webkit-box-shadow: 1px 1px 5px #BBB;
+	box-shadow: 1px 1px 5px #BBB;
+}
+
+/* Copyright footer */
+
+#copyright{
+	padding:15px 0 10px 10px;
+	font-size:10pt;
+	clear:both;
+}
+#copyright p{
+	margin:0;
+}
+
+/* Home Page */
+
+.royalSlider {
+  width: 920px;
+  height: 500px;
+}
+
+.infoBlock {
+  position: absolute;
+  max-width: 25%;
+  padding: 20px;
+  color: #FFF;
+  background: #000;
+  background: rgba(0,0,0,0.75);
+  left:50px;
+}
+.bottomleft{
+	top:300px;
+}
+#slide1{
+	top:250px;
+}
+#slide2{
+	top:300px;
+}
+#slide3{
+	top:300px;
+}
+#slide4{
+	top:50px;
+}
+.infoBlock h4 {
+  font-size: 20px;
+  margin: 0;
+  padding-bottom: 10px;
+}
+.infoBlock p {
+  font-size: 14px;
+  margin:0;
+  line-height:120%;
+}
+
+#contactInfo{
+	margin-top:15px;
+	padding-left:4px;
+}
+.contactMod{
+	border-right:1px solid #DDD;
+	display:inline-block;
+	vertical-align:top;
+}
+.contactMod h4{
+	margin:10px 0;
+	font-size:12pt;
+}
+.contactMod p{
+	margin:5px 0;
+}
+.addressContact{
+	padding:0px 30px 0 15px;
+}
+#hours{
+	padding:0 30px 0 7px;
+}
+
+/* About Page */
+
+#about{
+	padding:0 5px;
+	font-family:"Palatino Linotype", "Book Antiqua", Palatino, serif;
+	color:#333;
+	line-height:135%;
+}
+
+#about h2{
+	margin-top:5px;
+}
+
+#aboutImg{
+	float:right;
+	padding-left:20px;
+}
+
+/* Services Page */
+#services{
+	padding:0 5px;
+	font-family:"Palatino Linotype", "Book Antiqua", Palatino, serif;
+	color:#333;
+	line-height:135%;
+}
+
+#services h2{
+	margin-top:5px;
+}
+
+
+/* Organic Page */
+#organic{
+	font-family:"Palatino Linotype", "Book Antiqua", Palatino, serif;
+	color:#333;
+	padding:0 5px;
+}
+
+#organic h3{
+	font-size:16pt;
+	color:#555;
+	margin:5px 0 0 0;
+}
+#organic h3 span{
+	color:#238215;
+}
+
+#organic h4{
+	color:#30A523;
+	font-size:14pt;
+	border-bottom:1px solid;
+	margin-top:15px;
+	margin-bottom:10px;
+}
+
+
+/* Contacts Page */
+#contactPanel{
+	float:left;
+	display:inline-block;
+	vertical-align:top;
+	padding-left:7px;
+}
+#contactPanel{
+	display:inline-block;
+	vertical-align:top;
+}
+#contactPanel div{
+	padding-bottom:15px;
+}
+#contactPanel h4{
+	margin:10px 0;
+	font-size:12pt;
+}
+#contactPanel p{
+	margin:5px 0;
+}
+#topHeading{
+	margin:7px 0 0 0 !important;
+}
+#map{
+	float:right;
+	display:inline-block;
+}

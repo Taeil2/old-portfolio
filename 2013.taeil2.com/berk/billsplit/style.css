@@ -1,0 +1,425 @@
+/* Universal elements */
+
+body {
+  color:#34495e;
+  background-color:#E5E5E5;
+}
+img{
+	width:100%;
+}
+.ui-header {
+	background-color:#3498DB;
+	border:1px solid #2980B9;
+	border-bottom: 2px solid #2980B9;
+	color:#fff;
+}
+.ui-header .ui-title{
+	font-size: 22px;
+	margin:0.3em 30% 0.4em;
+}
+.ui-header .ui-btn-left{
+	top:0;
+	left:0;
+	height:100%;
+}
+.ui-header .ui-btn-right{
+	top:0;
+	right:0;
+	height:100%;
+}
+a{
+	color:#FFF;
+}
+a:hover{
+	color:#CCC;
+}
+.ui-header .ui-btn-inner{
+	top:4px;
+	font-size: 14px;
+}
+.ui-content{
+	padding:10px;
+}
+h2{
+ font-size:22px;
+ text-align:center;
+ margin:0;
+ margin-bottom:15px;
+ color:#304651;
+}
+h3{
+	font-size:20px;
+	padding:5px 5px 0 5px;
+	margin:0;
+}
+p{
+	margin:0;
+}
+.card{
+	background-color:#FFF;
+	border-width:2px !important;
+	border:none;
+	border-bottom: 2px solid #1abc9c;
+	margin:10px 0 !important;
+}
+.cardContent{
+	padding:5px;
+}
+
+/* Party Size Page */
+
+#psPage{
+	background-color:#F5F5F5;
+}
+#psControls a{
+	width:35px;
+	height:35px;
+	margin:0 auto;
+	-webkit-border-radius: 20px;
+	-moz-border-radius: 20px;
+	border-radius: 20px;
+}
+#psControls a .ui-btn-inner{
+	padding:0;
+	font-size:30px;
+	top:5px;
+}
+.psUsers{
+	text-align:center;
+	font-size:50px;
+	margin:15px 0;
+	height:64px;
+}
+#psControls p{
+	text-align:center;
+	font-weight:700;
+	font-size:40px;
+	line-height:1;
+}
+#numPplDisplay{
+	padding-bottom:15px;
+}
+
+/* Add Items Page */
+
+#addSharedbtn{
+	margin:0;
+}
+.iconContainer{
+	padding:5px;
+	padding-bottom:2px;
+}
+#sharedCard{
+	font-size:26px;
+}
+#sharedItems .item{
+	padding:2px 0;
+}
+#sharedItems p{
+	font-size:24px;
+	line-height:1.5;
+	text-align:center;
+	border:bottom:1px solid #000;
+}
+.sharedIcons{
+	font-size:0;
+}
+.sharedIcons img{
+	height:15px;
+	width:15px;
+	padding:2px;
+}
+
+#sharedItems .itemX{
+	margin-top:2px;
+}
+#sharedItems .itemX a{
+	margin-left:0;
+}
+.items{
+	padding-bottom:5px;
+}
+.item{
+	padding:0 0;
+	overflow:hidden;
+	clear:both;
+}
+.dollarSign{
+	font-size:22px;
+	color:#bdc3c7;
+	text-align:right;
+	margin-top:11px;
+}
+.itemInput{
+	position:relative;
+}
+.itemX{
+	font-size:24px;
+	margin-top:9px;
+}
+.itemX a{
+	margin-left:8px;
+	color:#e74c3c;
+}
+.itemX a:hover{
+	color:#c0392b;
+}
+
+/* Formatting the number input */
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    /* display: none; <- Crashes Chrome on hover */
+    -webkit-appearance: none;
+    margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
+div.ui-input-text input.ui-input-text, div.ui-input-text textarea.ui-input-text, .ui-input-search input.ui-input-text{
+	font-size:26px;
+	text-align:right;
+	line-height:1.9em;
+	border:1px solid #bdc3c7;
+	border-top:none;
+	-webkit-border-radius: 0;
+	-moz-border-radius: 0;
+	border-radius: 0;
+	padding:0;
+	padding-right:5px;
+	margin-left:5px;
+}
+div.ui-input-text input.ui-input-text:focus, div.ui-input-text textarea.ui-input-text:focus, .ui-input-search input.ui-input-text:focus{
+	border-color:#1abc9c;
+}
+div.ui-input-text{
+	padding:0;
+	margin:0;
+	margin-right:5px;
+}
+.coverLeft{
+	position:absolute;
+	left:5px;
+	background-color:#FFF;
+	width:3px;
+	height:35px;
+	z-index:1;
+}
+.coverRight{
+	position:absolute;
+	top:0;
+	right:0;
+	background-color:#FFF;
+	width:3px;
+	height:35px;
+	z-index:1;
+}
+/*
+::-webkit-input-placeholder {
+	text-align:right;
+	line-height:1.9em;
+	padding:0;
+	padding-right:5px;
+	margin-left:3px;
+}
+::-moz-placeholder {
+	text-align:right;
+	line-height:1.9em;
+	padding:0;
+	padding-right:5px;
+	margin-left:3px;
+}
+:-ms-input-placeholder {
+	text-align:right;
+	line-height:1.9em;
+	padding:0;
+	padding-right:5px;
+	margin-left:3px;
+}
+input:-moz-placeholder {
+	text-align:right;
+	line-height:1.9em;
+	padding:0;
+	padding-right:5px;
+	margin-left:3px;
+}
+*/
+
+
+
+.addItem{
+	height:100%;
+	padding:0;
+	margin:0;
+	-webkit-border-radius: 0;
+	-moz-border-radius: 0;
+	border-radius: 0;
+}
+.addItem span{
+	padding:0;
+}
+
+/* About Page */
+#aboutPage h3{
+	padding:7px;
+}
+#aboutPage p{
+	padding:7px;
+	padding-top:0;
+}
+
+/* Shared Page */
+
+#sharedPrompt{
+	margin-top:0 !important;
+	padding:2px;
+}
+.selectButtons div a{
+	margin:5px !important;
+	padding: 3px;
+}
+.inputHidden{
+/*	position:absolute;*/
+  left: -9999px !important;
+}
+.checkboxLabel{
+	margin:0;
+	font-size:0;
+}
+.checkboxLabel span{
+	margin:3px;
+	padding:0px !important;
+	padding-right:9px !important;
+}
+.ui-checkbox-off span span img{
+	border:3px solid #FFF;
+}
+.ui-checkbox-on span span img{
+	border:3px solid #2980b9;
+}
+.sharedSubmit div a{
+	margin:5px !important;
+}
+
+/* Tax & Tip Page */
+
+#ttCard{
+	margin-top:0 !important;
+}
+#ttPage #ttCard:after{
+	background-color:#FFF;
+}
+.ttLabels p{
+	float:right;
+	text-align:right;
+	margin:10px;
+}
+.ttAmounts{
+	padding-top:10px;
+}
+.ttAmounts p{
+	text-align:right;
+	margin-right:6px;
+}
+#taxAmount{
+	font-size:18px;
+	height:30px;
+	color:#e74c3c;
+}
+.taxCover{
+	height:25px;
+}
+#ttPage .coverLeft{
+	left:4px;
+}
+#ttPage .ui-input-text{
+	margin-right:7px;
+}
+.height1{
+	height:1px;
+}
+.ttAmounts .itemX{
+	margin-top:35px;
+	font-size:20px;
+}
+.ttAmounts .itemX a{
+	margin-left:5px;
+}
+#tip{
+	color:#27ae60;
+}
+.tax{
+	color:#e74c3c;
+}
+#total{
+	font-weight:700;
+}
+.perTax{
+	color:#e74c3c;
+}
+.ttControls{
+	padding:2px 0 10px 0 !important;
+}
+#ttPage h2{
+	font-size:32px;
+}
+.ttControl a{
+	width:30px;
+	height:30px;
+	margin:0 auto;
+	-webkit-border-radius: 17px;
+	-moz-border-radius: 17px;
+	border-radius: 17px;
+}
+.ttControl a .ui-btn-inner{
+	padding:0;
+	font-size:20px;
+	top:5px;
+}
+.ttControl p{
+	text-align:center;
+	font-size:30px;
+}
+
+/* Results Page */
+
+#resultsPage .ui-content{
+	padding:5px;
+}
+.perResult{
+	padding:5px;
+}
+.perResult .card{
+	padding:5px;
+	margin:0 !important;
+}
+.perResult .card p{
+	text-align:right;
+	line-height:1.4;
+}
+.perItem{
+	color:#888;
+}
+.perSharedItem{
+	color:#2980b9;
+}
+.perSubtotal{
+	padding-top:10px;
+}
+.perTax{
+	color:#e74c3c;
+}
+.perTip{
+	color:#27ae60;
+}
+.perTotal{
+	font-size:22px;
+	font-weight:700;
+}
+#grandTotals{
+	padding:0 6px 0 6px;
+}
+#grandTotalsLabels p{
+	text-align:right;
+	padding-right:5px;
+}
+#grandTotals .perSubtotal{
+	padding-top:0;
+}

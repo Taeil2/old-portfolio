@@ -1,0 +1,95 @@
+/* Basic Styling */
+
+/* Subtle background */
+body {background-image:url('../img/dust.png'); background-repeat:repeat; font-family: 'Boogaloo', cursive;}
+
+/* Default to greater than 960px */
+#wrapper {width:960px; margin:0 auto; text-align:center; clear:both;}
+h1 {font-size:32px; width:830; float:left; padding-left:15px; margin:5px 0 0 0;}
+#viewingArea {font-size:20px; width:140px; float:right; text-align:right; padding-right:15px; margin:17px 0 0 0;}
+.frames {display:none;}
+#frame4 {display:inline;}
+.image {height:220px; padding:5px;}
+#smallImage {display:none;}
+
+
+/* Media Queries */
+/* less than 960px */
+@media screen and (max-width: 960px) {
+
+#wrapper {width:720px;}
+#frame4 {display:none;}
+#frame3 {display:inline;}
+
+}
+
+/* less than 720px */
+@media screen and (max-width: 720px) {
+
+#wrapper {width:550px;}
+h1 {padding:0; margin:0 auto; margin-bottom:3px; float:none;}
+#viewingArea {float:none; text-align:center; margin:0 auto;}
+#frame3 {display:none;}
+#frame2 {display:inline;}
+#bigImage {display:none;}
+#smallImage {display:inline;}
+
+}
+
+/* less than 540px */
+@media screen and (max-width: 550px) {
+
+#wrapper {width:320px;}
+#frame2 {display:none;}
+#frame1 {display:inline;}
+#bigImage {display:none;}
+#smallImage {display:inline;}
+
+}
+
+/* handheld landscape */
+/*@media handheld and (orientation:landscape) {
+
+#wrapper {width:550px;}
+h1 {padding:0; margin:0 auto; margin-bottom:3px; float:none;}
+#viewingArea {float:none; text-align:center; margin:0 auto;}
+#frame3 {display:none;}
+#frame2 {display:inline;}
+#bigImage {display:none;}
+#smallImage {display:inline;}
+
+}*/
+
+/* handheld portrait */
+/*@media handheld and (orientation:portrait) {
+
+#wrapper {width:320px;}
+#frame2 {display:none;}
+#frame1 {display:inline;}
+#bigImage {display:none;}
+#smallImage {display:inline;}
+
+}*/
+
+/*@media only screen and (-webkit-min-device-pixel-ratio: 2) and (orientation:landscape) {
+
+#wrapper {width:550px;}
+h1 {padding:0; margin:0 auto; margin-bottom:3px; float:none;}
+#viewingArea {float:none; text-align:center; margin:0 auto;}
+#frame3 {display:none;}
+#frame2 {display:inline;}
+#bigImage {display:none;}
+#smallImage {display:inline;}
+
+}*/
+
+/* handheld portrait */
+/*@media only screen and (-webkit-min-device-pixel-ratio: 2) and (orientation:portrait) {
+
+#wrapper {width:320px;}
+#frame2 {display:none;}
+#frame1 {display:inline;}
+#bigImage {display:none;}
+#smallImage {display:inline;}
+
+}*/

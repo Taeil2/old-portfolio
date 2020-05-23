@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Taeil Kwak - Tag Radio</title>
+    <link href="../css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="../css/style.css" rel="stylesheet">
+    <link rel="icon" type="image/png" href="../img/favicon.png">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+  </head>
+  <body>
+
+    <div id="header">
+
+      <div id="logo">
+        <a href="../index.html">Taeil Kwak</a>
+      </div>
+
+      <div id="navbar">
+        <ul>
+          <li><a href="../index.html">Portfolio</a></li>
+          <li><a href="../resume.pdf">Resume</a></li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div id="content">
+
+      <div id="smallerWidth">
+
+        <h3>Tag Radio</h3>
+
+        <div id="introBlock">
+          <div id="leftBlock"><img src="img/tagradio.png" width="670px"></div>
+          <div id="rightBlock">
+            <h4>Link</h4>
+            <p><a href="../berk/tagradio/">Tag Radio</a></p>
+            <h4>Skills</h4>
+            <p>Web Design<br>Data Visualization</p>
+            <h4>Tools</h4>
+            <p>HTML, CSS, Javascript<br>last.fm API, Spotify API<br>d3.js</p>
+            <h4>Partner</h4>
+            <p>Kate Rushton</p>
+          </div>
+        </div>
+
+        <div id="post">
+          
+          <p>While looking through the <a href="http://www.last.fm/api">last.fm api</a>, we came up with the idea of visualizing genre's and their relations with one another. Last.fm users heavily tag their music and artists, and the api allows us to look at which tags are most similar to any tag (<a href="http://www.last.fm/api/show/tag.getSimilar">http://www.last.fm/api/show/tag.getSimilar</a>). We gathered this data for the top 50 tags on last.fm and came up with an algorithm for finding their relations with one another.</p>
+          <p>After we gathered the data, we visualized it using <a href="http://d3js.org/">d3</a>. The size of a tag is its popularity, and its proximity to other tags is how related they are. You can browse through tags and listen to the top tracks using Spotify.</p>
+
+        </div>
+
+      </div> <!-- end of smallerWidth -->
+
+    </div> <!-- end of content -->
+
+  </body>
+</html>

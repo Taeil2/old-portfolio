@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Kenilworth Cleaners</title>
+    <link rel="icon" type="image/png" href="img/favicon.png">
+    <!-- royal slider stylesheet -->
+    <link rel="stylesheet" href="royalslider/royalslider.css">
+    <!-- skin stylesheet (change it if you use another) -->
+    <!-- <link rel="stylesheet" href="royalslider/default/rs-default.css"> -->
+    <link rel="stylesheet" href="royalslider/minimal-white/rs-minimal-white.css">
+    <!-- Plugin requires jQuery 1.7+  -->
+    <!-- If you already have jQuery on your page, you shouldn't include it second time. -->
+    <script src='royalslider/jquery-1.8.0.min.js'></script>
+    <!-- Main slider JS script file --> 
+    <!-- Create it with slider online build tool for better performance. -->
+    <script src="royalslider/jquery.royalslider.min.js"></script>
+    <link href="css/style.css" rel="stylesheet">
+
+  </head>
+  <body>
+
+    <div id="logo">
+      <a href="index.html" title="Home"><img src="img/logo2400.png"></a>
+    </div>
+
+    <div id="navBar">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="organic.html">Organic Cleaning</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+
+    <div id="content">
+
+      <div class="royalSlider rsMinW">
+        <!-- slide with any content -->
+        <div>
+          <img class="rsImg" src="img/slide1.png" />
+          <div class="infoBlock bottomleft rsABlock" data-fade-effect="" data-move-offset="10" data-move-effect="bottom" data-speed="200">
+            <h4>Welcome to Kenilworth Cleaners!</h4>
+            <p>Your neighborhood dry cleaner providing exceptional quality and care for all of your clothing needs.</p>
+          </div>
+        </div>
+        <div>
+          <img class="rsImg" src="img/slide2.png" />
+          <div class="infoBlock bottomleft rsABlock" data-fade-effect="" data-move-offset="10" data-move-effect="bottom" data-speed="200">
+            <p>We meet all your drycleaning needs including:</p>
+            <ul>
+              <li>Same day service</li>
+              <li>Alterations</li>
+              <li>Special fabrics</li>
+            </ul>
+          </div>
+        </div>
+        <div>
+          <img class="rsImg" src="img/slide3.jpg" />
+          <div class="infoBlock bottomleft rsABlock" data-fade-effect="" data-move-offset="10" data-move-effect="bottom" data-speed="200">
+            <h4>Organic Cleaning</h4>
+            <p>Information about organic stuff!</p>
+          </div>
+        </div>
+        <div>
+          <img class="rsImg" src="img/slide4.png" />
+          <div id="slide4" class="infoBlock rsABlock" data-fade-effect="" data-move-offset="10" data-move-effect="bottom" data-speed="200">
+            <h4>Pickup and Delivery</h4>
+            <p>DELIVERY!!!!</p>
+          </div>
+        </div>
+      </div>
+
+      <div id="contactInfo">
+        <div class="contactMod" id="hours">
+          <h4>Hours</h4>
+          <p>Monday - Friday: 7:00 am - 6:30 pm</p>
+          <p>Saturday: 8:00 am - 5:00 pm</p>
+          <p>Sunday: Closed</p>
+        </div>
+        <div class="contactMod addressContact">
+          <h4>Address</h4>
+          <p>554 Green Bay Road</p>
+          <p>Kenilworth, IL 60043</p>
+        </div>
+        <div class="contactMod addressContact">
+          <h4>Contact</h4>
+          <p>(847) 256-6557</p>
+          <p>kwak2324@gmail.com</p>
+        </div>
+      </div>
+      <div id="copyright">
+        <p>&copy 2012 Kenilworth Cleaners</p>
+      </div>
+
+    </div>
+
+    <script>
+    jQuery(document).ready(function($) {
+      $(".royalSlider").royalSlider({
+        // options go here
+        // as an example, enable keyboard arrows nav
+        keyboardNavEnabled:true,
+        imgWidth:920,
+        imgHeight:500,
+        imageScaleMode:'fill',
+        transitionType:'fade',
+        autoPlay: {
+          // autoplay options go gere
+          enabled:true,
+          delay:3000
+        }
+      });
+    });
+    </script>
+  </body>
+</html>

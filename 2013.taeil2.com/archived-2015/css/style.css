@@ -1,0 +1,250 @@
+/* base stuff */
+
+html{
+	background-image:url('../img/cream_dust.png');
+
+}
+body{
+	min-width:0px;
+	max-width:970px;
+	padding:0 13px;
+	margin:0 auto;
+	font-family:'Open Sans', Calibri, Arial, Helvetica, sans-serif;
+	font-size:11pt;
+	color:#444;
+}
+
+/* universal elements */
+
+#header{
+	height:60px;
+	position:relative;
+	/*border-bottom:2px solid #888;*/
+	padding:30px 0 0 0;
+	margin-bottom:13px;
+}
+#logo{
+	font-size:28pt;
+	font-weight:;
+	position:absolute;
+	bottom:0;
+	left:0;
+	font-family:;
+}
+#logo a{
+	color:#444;
+	text-decoration:none;
+}
+#navbar{
+	font-size:14pt;
+	float:right;
+	position:absolute;
+	bottom:0;
+	right:0;
+}
+#navbar ul{
+	padding:0;
+	margin:0;
+	list-style-type:none;
+}
+#navbar li{
+	display:inline;
+	padding-left:10px;
+}
+
+#navbar li a{
+	text-decoration:none;
+}
+#navbar li a:link, #navbar li a:visited{
+	color:#444;
+}
+#navbar li a:active, #navbar li a:hover{
+	color:#22558B;
+	border-bottom:2px solid #22558B;
+}
+img{
+	border:1px solid #DDD;
+}
+
+/* home page */
+
+#intro{
+	padding:12px 12px 0 12px;
+	background-color:#FFF;
+	border:1px solid #DDD;
+	color:#333;
+}
+#intro img{
+	float:left;
+	margin:0 15px 0 0;
+	width:100px;
+}
+#intro p{
+	margin-top:0;
+}
+#clearfix{
+	clear:both;
+	height:12px;
+}
+#skills{
+	text-align:center;
+	padding-top:17px;
+}
+#skills span{
+	font-weight:bold;
+}
+#option-set{
+	margin:0 10px;
+}
+.btn{
+	margin:3px 0;
+}
+.btn:focus, .btn:active, .btn.active{
+	color:#FFF;
+	background-color: #0088cc;
+	text-shadow:0 -1px 0 rgba(0,0,0,0.25)
+}
+
+#portfolio{
+	clear:both;
+	padding-top:40px;
+}
+.portpiece{
+	width:292px;
+	display:inline-block;
+	height:374px;
+	padding:0 0 25px;
+	vertical-align:top;
+}
+.portpiece a{
+	text-decoration:none;
+}
+.portpiece h3{
+	font-size:1.17em;
+	line-height:1.17em;
+	padding-top:7px;
+}
+.portpiece a:link h3, .portpiece a:visited h3{
+	color:#333;
+}
+.portpiece a:active h3, .portpiece a:hover h3{
+	color:#2C6CB1;
+}
+.first{
+	padding-left:0;
+}
+/*.portpiece img{
+	width:280px;
+	height:230px;
+	border:3px solid #BBB;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+}*/
+.portpiece img{
+	width:280px;
+	height:230px;
+	padding: 5px;
+	border: solid 1px #CCC;
+	-moz-box-shadow: 1px 1px 5px #999;
+	-webkit-box-shadow: 1px 1px 5px #999;
+  box-shadow: 1px 1px 5px #999;
+}
+.portpiece a:active img, .portpiece a:hover img{
+	border: solid 1px #CCC;
+	-moz-box-shadow: 1px 1px 5px 2px #999;
+	-webkit-box-shadow: 1px 1px 5px 2px #999;
+  box-shadow: 1px 1px 5px 2px #999;
+}
+
+.portpiece h3{
+	margin:7px 0 0 0;
+	text-align:center;
+}
+.portpiece p{
+	margin:5px 0 0 0;
+	text-align:center;
+}
+
+/* portfolio pieces css */
+#smallerWidth{
+	width:850px;
+	margin:0 auto;
+	padding-top:1px;
+}
+#smallerWidth h3{
+	margin:5px 0 5px 0;
+}
+#introBlock{
+	padding-bottom:10px;
+}
+.outer-center {
+    float: right;
+    right: 50%;
+    position: relative;
+}
+.inner-center {
+    float: right;
+    right: -50%;
+    position: relative;
+}
+.clear {
+    clear: both;
+}
+#leftBlock{
+	display:inline-block;
+/*	width:700px;*/
+	border:1px solid #888;
+	-moz-box-shadow: 1px 1px 5px 2px #999;
+	-webkit-box-shadow: 1px 1px 5px 2px #999;
+  box-shadow: 1px 1px 5px 1px #999;
+}
+#rightBlock{
+	display:inline-block;
+	vertical-align:top;
+	padding-left:20px;
+	width:150px;
+}
+#rightBlock h4{
+	margin:3px 0 5px 0;
+}
+#rightBlock p{
+	margin:0 0 25px 0;
+}
+#post{
+	padding-bottom:20px;
+}
+#post h3{
+	font-size:16pt;
+}
+.center{
+	display:block;
+	margin-left:auto;
+	margin-right:auto;
+}
+.noborder{
+	border:none;
+}
+
+/* royal slider stuff */
+.royalSlider {
+  width: 960px;
+  height: 600px;
+  margin-bottom:30px;
+}
+
+.infoBlock {
+  position: absolute;
+  top:550px;
+  background: #000;
+  background: rgba(0,0,0,0.75);
+  color:#FFF;
+  left: auto;
+  width: 60%;
+  padding-bottom: 0;
+  overflow: hidden;
+  padding: 15px;
+}
+.infoBlock p {
+  font-size: 14px;
+  margin: 4px 0 0;
+}

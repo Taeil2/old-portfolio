@@ -1,0 +1,377 @@
+
+<!DOCTYPE html> 
+<html> 
+<head> 
+	<title>Tip Calculator - Item Mode</title> 
+	<!-- Removes the Safari toolbars -->
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"> 
+	<!-- Jquery mobile -->
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.css" />
+	<!-- 960 grid system -->
+	<link rel="stylesheet" href="http://jeromeetienne.github.com/jquery-mobile-960/css/jquery-mobile-fluid960.css" />
+	<!-- Jquery mobile js -->
+	<script src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.js"></script>
+	<!-- Fastclick -->
+	<script src="js/jQuery.fastClick.js"></script>
+	<!-- css -->
+	<link rel="stylesheet" href="css/split.css" />
+	<!-- This disables double tap zoom -->
+	<script>
+	(function($) {
+	  $.fn.nodoubletapzoom = function() {
+	      $(this).bind('touchstart', function preventZoom(e) {
+	        var t2 = e.timeStamp
+	          , t1 = $(this).data('lastTouch') || t2
+	          , dt = t2 - t1
+	          , fingers = e.originalEvent.touches.length;
+	        $(this).data('lastTouch', t2);
+	        if (!dt || dt > 500 || fingers > 1) return; // not double-tap
+
+	        e.preventDefault(); // double tap - prevent the zoom
+	        // also synthesize click events we just swallowed up
+	        $(this).trigger('click').trigger('click');
+	      });
+	  };
+	})(jQuery);
+	</script>
+</head> 
+<body onLoad="setFocus()"> 
+
+
+	<!-- People Page -->
+	<div data-role="page" id="peoplePage">
+
+		<div data-role="header" class="header">
+			<a href="index.html">Back</a>
+			<h1>Item Mode</h1>
+			<a onclick="toItem()">Next</a>
+		</div><!-- /header -->
+
+		<div class="wrapper">
+			<div class="content">
+		    <label for="numPeople">Number of People:</label>
+		    <input id="numPeople" type="text" name="numPeople" value="1" readonly="readonly" />
+		  </div>
+		</div>
+
+		<div class="numpad">
+			<div class="buttonRow">
+				<div class="buttonContainer"><a data-role="button" data-theme="a" id="buttonppl7" class="numButton">7</a></div>
+				<div class="buttonContainer"><a data-role="button" data-theme="a" id="buttonppl8" class="numButton">8</a></div>
+				<div class="buttonContainer"><a data-role="button" data-theme="a" id="buttonppl9" class="numButton">9</a></div>
+			</div>
+			<div class="buttonRow">
+				<div class="buttonContainer"><a data-role="button" data-theme="a" id="buttonppl4" class="numButton">4</a></div>
+				<div class="buttonContainer"><a data-role="button" data-theme="a" id="buttonppl5" class="numButton">5</a></div>
+				<div class="buttonContainer"><a data-role="button" data-theme="a" id="buttonppl6" class="numButton">6</a></div>
+			</div>
+			<div class="buttonRow">
+				<div class="buttonContainer"><a data-role="button" data-theme="a" id="buttonppl1" class="numButton">1</a></div>
+				<div class="buttonContainer"><a data-role="button" data-theme="a" id="buttonppl2" class="numButton">2</a></div>
+				<div class="buttonContainer"><a data-role="button" data-theme="a" id="buttonppl3" class="numButton">3</a></div>
+			</div>
+			<div class="buttonRow">
+				<div class="buttonContainer"><a data-role="button" data-theme="a" id="buttonDotppl" class="numButton ui-disabled">.</a></div>
+				<div class="buttonContainer"><a data-role="button" data-theme="a" id="buttonppl0" class="numButton">0</a></div>
+				<div class="buttonContainer"><a data-role="button" data-theme="a" id="buttonDelppl" class="numButton">del</a></div>
+			</div>
+		</div>
+
+	</div> <!-- end of form page -->
+
+
+	<!-- Item page -->
+
+	<div data-role="page" id="itemPage">
+
+		<div data-role="header" class="header">
+			<a onclick="backToPeople()">Back</a>
+			<h1>Item Mode</h1>
+			<a onclick="toTaxTip()">Next</a>
+		</div><!-- /header -->
+		
+		<div id="runningSubtotal">
+			<div id="subtotalContainer">
+				<span>Running Subtotal:</span><span id="runningSubtotalNum">$0.00</span>
+			</div>
+		</div>
+
+		<div class="numpad">
+			<div class="buttonRow">
+				<div class="buttonContainer"><a data-role="button" data-theme="a" id="button7" class="numButton">7</a></div>
+				<div class="buttonContainer"><a data-role="button" data-theme="a" id="button8" class="numButton">8</a></div>
+				<div class="buttonContainer"><a data-role="button" data-theme="a" id="button9" class="numButton">9</a></div>
+			</div>
+			<div class="buttonRow">
+				<div class="buttonContainer"><a data-role="button" data-theme="a" id="button4" class="numButton">4</a></div>
+				<div class="buttonContainer"><a data-role="button" data-theme="a" id="button5" class="numButton">5</a></div>
+				<div class="buttonContainer"><a data-role="button" data-theme="a" id="button6" class="numButton">6</a></div>
+			</div>
+			<div class="buttonRow">
+				<div class="buttonContainer"><a data-role="button" data-theme="a" id="button1" class="numButton">1</a></div>
+				<div class="buttonContainer"><a data-role="button" data-theme="a" id="button2" class="numButton">2</a></div>
+				<div class="buttonContainer"><a data-role="button" data-theme="a" id="button3" class="numButton">3</a></div>
+			</div>
+			<div class="buttonRow">
+				<div class="buttonContainer"><a data-role="button" data-theme="a" id="buttonDot" class="numButton">.</a></div>
+				<div class="buttonContainer"><a data-role="button" data-theme="a" id="button0" class="numButton">0</a></div>
+				<div class="buttonContainer"><a data-role="button" data-theme="a" id="buttonDel" class="numButton">del</a></div>
+			</div>
+		</div>
+
+		<div id="wrapper2">
+
+			<div id="sharedholder">
+				<div data-role="collapsible-set" data-inset="false" id="sharedAccordion">
+					<div id="add_shared_items" data-role="collapsible" data-theme="b">
+						<h3>Add a shared item.</h3>
+						<input type="text" id="per0item0" name="per0item0"  class="item" value="$0.00" onclick="itemFocus(0,0)" readonly="readonly">
+						<div id="per0ppl"></div>
+						<div id="sharedInstructions">
+							<div id="instructions">
+								<p>1) Enter shared item price</p>
+								<p>2) Select people below</p>
+							</div>
+							<div id="sharedDone">
+								<a data-role="button" data-theme="a" onclick="doneShared()">Done</a>
+							</div>
+						</div>
+					</div><!-- end of collapsible-->
+				</div><!-- end of collapsible-set -->
+				<!-- Shared item div. -->
+				<div class="person" id="person_shared">
+					<div class="personIcon">Shared<br/> Items</div>
+					<div class="personItems" id="per0items">
+
+					</div>
+				</div>
+			</div>
+
+			<div id="peopleItems">
+
+				<!-- Sample. This is normally generated by the JS -->
+				<div class="person" id="person1">
+					<div class="personIcon" onclick="personFocus(1)">
+						<img src="img/person2.png"><span>1</span>
+					</div>
+					<!-- Putting this button before the item results in proper appearance -->
+					<button class="addItemButton" data-role="none" onclick="addItem(1)">Add Item</button>
+					<div class="personItems" id="per2items">
+						<div class="itemAndButton" id="itemAndButton1-1">
+							<!-- This button is before the item for the same reason-->
+							<a class="deleteButton" data-role="button" data-icon="delete" onclick="removeItem(1,1)">&nbsp;</a>
+							<div class="itemContainer">
+								<input type="text" class="item" id="per1item1" name="per1item1" value="$0.00" onclick="itemFocus(1,1)" readonly="readonly">
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- Demo person2 with two items -->
+				<div class="person" id="person2">
+					<div class="personIcon" onclick="personFocus(2)">
+						<img src="img/person2.png"><span>2</span>
+					</div>
+					<button class="addItemButton" data-role="none" onclick="addItem(2)">Add Item</button>
+					<div class="personItems" id="per2items">
+						<div class="itemAndButton" id="itemAndButton2-1">
+							<a class="deleteButton" data-role="button" data-icon="delete" onclick="removeItem(2,1)">&nbsp;</a>
+							<div class="itemContainer">
+								<input type="text" class="item" id="per2item1" name="per1item1" value="$0.00" onclick="itemFocus(2,1)" readonly="readonly">
+							</div>
+						</div>
+						<div class="itemAndButton" id="itemAndButton2-2">
+							<a class="deleteButton" data-role="button" data-icon="delete" onclick="removeItem(2,2)">&nbsp;</a>
+							<div class="itemContainer">
+								<input type="text" class="item" id="per2item2" name="per1item1" value="$0.00" onclick="itemFocus(2,2)" readonly="readonly">
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</div> <!-- End of people items -->
+
+		</div> <!-- End of wrapper 2 -->
+
+
+	</div> <!-- End of item page -->
+
+<!-- Tax and Tip Page -->
+
+	<div data-role="page" id="taxTipPage">
+
+		<div data-role="header" class="header">
+			<a onclick="backToItem()">Back</a>
+			<h1>Item Mode</h1>
+			<a onclick="toResults2()">Done</a>
+		</div><!-- /header -->
+
+
+		<div class="wrapper">
+			<div class="content">
+		    <label for="tax">Tax Amount:</label>
+		    <input type="text" name="tax" id="tax" value="$0.00" readonly="readonly" onclick="taxClick()" />
+		    <label for="tip">Tip Percent:</label>
+		    <input type="text" name="tip" id="tip" value="18%" readonly="readonly" onclick="tipClick()" />
+			</div>
+		</div>
+
+		<div class="numpad">
+			<div class="buttonRow">
+				<div class="buttonContainer"><a data-role="button" data-theme="a" id="buttontt7" class="numButton">7</a></div>
+				<div class="buttonContainer"><a data-role="button" data-theme="a" id="buttontt8" class="numButton">8</a></div>
+				<div class="buttonContainer"><a data-role="button" data-theme="a" id="buttontt9" class="numButton">9</a></div>
+			</div>
+			<div class="buttonRow">
+				<div class="buttonContainer"><a data-role="button" data-theme="a" id="buttontt4" class="numButton">4</a></div>
+				<div class="buttonContainer"><a data-role="button" data-theme="a" id="buttontt5" class="numButton">5</a></div>
+				<div class="buttonContainer"><a data-role="button" data-theme="a" id="buttontt6" class="numButton">6</a></div>
+			</div>
+			<div class="buttonRow">
+				<div class="buttonContainer"><a data-role="button" data-theme="a" id="buttontt1" class="numButton">1</a></div>
+				<div class="buttonContainer"><a data-role="button" data-theme="a" id="buttontt2" class="numButton">2</a></div>
+				<div class="buttonContainer"><a data-role="button" data-theme="a" id="buttontt3" class="numButton">3</a></div>
+			</div>
+			<div class="buttonRow">
+				<div class="buttonContainer"><a data-role="button" data-theme="a" id="buttonDottt" class="numButton">.</a></div>
+				<div class="buttonContainer"><a data-role="button" data-theme="a" id="buttontt0" class="numButton">0</a></div>
+				<div class="buttonContainer"><a data-role="button" data-theme="a" id="buttonDeltt" class="numButton">del</a></div>
+			</div>
+		</div>
+
+	</div> <!-- End of tax and tip page -->
+
+<!-- Results Page -->
+
+	<div data-role="page" id="simpleResults">
+
+		<div data-role="header" class="header">
+			<a onclick="backToTaxTip()">Back</a>
+			<h1>Item Mode</h1>
+			<a onclick="toResults()">Details</a>
+		</div><!-- /header -->
+
+		<div id="resultsContent2">
+
+		</div>
+
+		<div id="grandTotals2">
+			<div id="gtTitle2">Grand Totals</div>
+			<div id="gtLabels2">
+				<span class="personSub">Subtotal:</span>
+				<span class="personTax">Tax:</span>
+				<span class="personTip">Tip:</span>
+				<span class="personTotal">Total:</span>
+			</div>
+			<div id="gtNumbers2">
+				<span class="personSub" id="gtSub2">$XX.XX</span>
+				<span class="personTax" id="gtTax2">$X.XX</span>
+				<span class="personTip" id="gtTip2">$X.XX</span>
+				<span class="personTotal" id="gtTotal2">$XX.XX</span>
+			</div>
+		</div>
+
+	</div> <!-- End of results page -->
+
+<!-- Results Page -->
+
+	<div data-role="page" id="resultsPage">
+
+		<div data-role="header" class="header">
+			<a onclick="toResults2()">Back</a>
+			<h1>Item Mode</h1>
+		</div><!-- /header -->
+
+		<div id="resultsContent">
+
+			<!-- This content is generated by the JS -->
+
+			<div class="personResult">
+				<div class="personResultBorder">
+					<img src="img/person2.png">1
+					<div class="personItemsResults">
+						<span>2.11</span>
+						<span>2.11</span>
+					</div>
+					<div class="personTotals">
+						<span class="personSub">4.22</span>
+						<span class="personTax">1.22</span>
+						<span class="personTip"></span>
+						<span class="personTotal">5.44</span>
+
+					</div>
+				</div>
+			</div>
+
+			<div class="personResult">
+				<div class="personResultBorder">
+					<img src="img/person2.png">1
+					<div class="personResultItems">
+						<span>2.11</span>
+						<span>2.11</span>
+					</div>
+					<div class="personTotals">
+						<span class="personSub">4.22</span>
+						<span class="personTax">1.22</span>
+						<span class="personTotal">5.44</span>
+					</div>
+				</div>
+			</div>
+
+			<div class="personResult">
+				<div class="personResultBorder">
+					<img src="img/person2.png">1
+					<div class="personResultItems">
+						<span>2.11</span>
+						<span>2.11</span>
+					</div>
+					<div class="personTotals">
+						<span class="personSub">4.22</span>
+						<span class="personTax">1.22</span>
+						<span class="personTotal">5.44</span>
+					</div>
+				</div>
+			</div>
+
+			<div class="personResult">
+				<div class="personResultBorder">
+					<img src="img/person2.png">1
+					<div class="personResultItems">
+						<span>2.11</span>
+						<span>2.11</span>
+					</div>
+					<div class="personTotals">
+						<span class="personSub">4.22</span>
+						<span class="personTax">1.22</span>
+						<span class="personTotal">5.44</span>
+					</div>
+				</div>
+			</div>
+
+		</div>
+
+		<div id="grandTotals">
+			<div id="gtTitle">Grand Totals</div>
+			<div id="gtLabels">
+				<span class="personSub">Subtotal:</span>
+				<span class="personTax">Tax:</span>
+				<span class="personTip">Tip:</span>
+				<span class="personTotal">Total:</span>
+			</div>
+			<div id="gtNumbers">
+				<span class="personSub" id="gtSub">$XX.XX</span>
+				<span class="personTax" id="gtTax">$X.XX</span>
+				<span class="personTip" id="gtTip">$X.XX</span>
+				<span class="personTotal" id="gtTotal">$XX.XX</span>
+		</div>
+
+	</div> <!-- End of results page -->
+
+</body>
+
+	<!-- Calculator JS -->
+	<script src="js/split.js"></script>
+
+</html>

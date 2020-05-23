@@ -1,0 +1,122 @@
+/* D3 stuff */
+circle.node {
+  stroke: #000;
+  stroke-width: 1.5px;
+}
+
+line.link {
+  stroke: #999;
+  stroke-opacity: .6;
+}
+
+/* Main layout and universal styling */
+
+html, body, .content{
+height:100%;
+margin:0;
+padding:0;
+font-family: arial,"Helvetica Neue",helvetica,sans-serif;
+font-size:14px;
+color:#333;
+}
+
+h1{
+	margin:0px 0px 8px 0px;
+	font-size:20pt;
+}
+
+h2{
+	margin:12px 0px 5px 0px;
+	font-size:14pt;
+}
+
+.content{
+display:block;
+padding-right:301px;
+}
+
+.stretch {
+width:100%;
+display:block;
+float:left;
+}
+
+#chartwrapper{
+}
+
+#chart{
+	background: url(texture-noise.png);
+	height: 100%;
+}
+#chart svg {
+	height: 100%;
+	display: block;
+	margin: 0 auto;
+}
+#logo {
+	height:100px;
+	position:absolute;
+	left:20px;
+	top:10px;
+}
+
+.fixed {
+background-color:#F3F7F7;
+height:100%;
+padding:0;
+width:300px; /* total - border */
+float:right;
+margin-right:-301px;
+border-left:solid #AAA 1px;
+overflow:auto;
+-moz-box-shadow: 0 0 8px #888;
+-webkit-box-shadow: 0 0 8px #888;
+box-shadow: 0 0 8px #888;
+}
+
+/* More stuff */
+
+#fixedContent{
+}
+#welcome{
+	padding:10px;
+}
+#tagTitle{
+	padding:10px 10px 0 10px;
+	margin-bottom:2px;
+}
+
+#tagSummary{
+	padding:0 10px;
+}
+#topTracks h2{
+	padding-left:10px;
+	margin-bottom:0;
+}
+#topArtists{
+	padding:0 0 10px 7px;
+}
+#topArtists h2{
+	margin-bottom:0;
+	padding-left:3px;
+}
+
+.artist {
+display:inline-block;
+vertical-align:top;
+}
+.artist img{
+	padding:2px;
+	border:1px solid #999;
+}
+
+#artist0, #artist2{
+padding-right:7px;
+}
+
+.artistName{
+display:block;
+text-align:center;
+padding:3px 0px 7px 0px;
+width:126px;
+}

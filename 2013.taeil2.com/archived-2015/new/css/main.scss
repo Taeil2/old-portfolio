@@ -1,0 +1,194 @@
+
+
+body {
+ font-family: 'Lato', sans-serif;
+ line-height: 1.2em;
+}
+
+html, body, .introduction {
+    height: 100%;
+}
+
+/* ==========================================================================
+   Mixins
+   ========================================================================== */
+
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+          border-radius: $radius;
+}
+
+/* ==========================================================================
+   Header
+   ========================================================================== */
+
+header {
+    position: fixed;
+    width: 100%;
+    font-size: 50px;
+    line-height: 108px;
+    height: 108px;
+    color: #fff;
+    -webkit-transition: all 500ms ease;
+    -moz-transition: all 500ms ease;
+    -o-transition: all 500ms ease;
+    transition: all 500ms ease;
+    z-index: 10;
+    a {
+        color: #fff;
+        text-decoration: none;
+    }
+}
+header.sticky {
+  font-size: 24px;
+  line-height: 48px;
+  height: 48px;
+  background: #008B8B;
+  color: #fff;
+}
+.logo {
+    position: absolute;
+    left: 10px;
+}
+nav {
+    text-align: center;
+    li {
+        display: inline-block;
+    }
+}
+
+/* ==========================================================================
+   Introduction
+   ========================================================================== */
+
+.introduction {
+    background-color: #eee;
+    position: relative;
+    #introsvg, p {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: #fff;
+        font-size: 20px;
+    }
+}
+#introsvg {
+    width: 80%;
+    path {
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        fill: none;
+        stroke: #000;
+        stroke-width: 3;
+    }
+}
+
+
+
+/* ==========================================================================
+   Background
+   ========================================================================== */
+
+
+.backgroundSection {
+}
+
+
+.backgroundCircle img {
+    @include border-radius(400px);
+    border: 5px solid rgba(0,0,0, .9);
+}
+.backgroundText {
+    width: 50%;
+    font-size: 20px;
+    color: #333;
+}
+
+
+
+
+.skills {
+  background: #0F2743;
+}
+
+
+
+/* ==========================================================================
+   Media Queries
+   ========================================================================== */
+
+@media only screen and (min-width: 35em) {
+
+}
+
+@media print,
+       (-o-min-device-pixel-ratio: 5/4),
+       (-webkit-min-device-pixel-ratio: 1.25),
+       (min-resolution: 120dpi) {
+
+}
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+.ir {
+    background-color: transparent;
+    border: 0;
+    overflow: hidden;
+    *text-indent: -9999px;
+}
+
+.ir:before {
+    content: "";
+    display: block;
+    width: 0;
+    height: 150%;
+}
+
+.hidden {
+    display: none !important;
+    visibility: hidden;
+}
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
+
+.invisible {
+    visibility: hidden;
+}
+
+.clearfix:before,
+.clearfix:after {
+    content: " ";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.clearfix {
+    *zoom: 1;
+}

@@ -1,0 +1,118 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+	<title>Tip Calculator - Simple Mode</title> 
+	<!-- Removes the Safari toolbars -->
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"> 
+	<!-- Jquery mobile -->
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.css" />
+	<!-- Jquery mobile js -->
+	<script src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.js"></script>
+	<!-- Fastclick -->
+	<script src="js/jQuery.fastClick.js"></script>
+	<!-- css -->
+	<link rel="stylesheet" href="css/simple.css" />
+	<!-- This disables double tap zoom -->
+	<script>
+	(function($) {
+	  $.fn.nodoubletapzoom = function() {
+	      $(this).bind('touchstart', function preventZoom(e) {
+	        var t2 = e.timeStamp
+	          , t1 = $(this).data('lastTouch') || t2
+	          , dt = t2 - t1
+	          , fingers = e.originalEvent.touches.length;
+	        $(this).data('lastTouch', t2);
+	        if (!dt || dt > 500 || fingers > 1) return; // not double-tap
+
+	        e.preventDefault(); // double tap - prevent the zoom
+	        // also synthesize click events we just swallowed up
+	        $(this).trigger('click').trigger('click');
+	      });
+	  };
+	})(jQuery);
+	</script>
+</head> 
+<body onLoad="setFocus()"> 
+
+<!-- Simple form page -->
+
+<div data-role="page" id="simpleForm">
+
+	<div data-role="header" id="header">
+		<a href="index.html" data-ajax="false">Back</a>
+		<h1>Simple Mode</h1>
+		<a id="doneButton">Done</a>
+	</div><!-- /header -->
+
+	<div id="wrapper">
+		<div id="content">
+	    <label for="billTotal">Total:</label>
+	    <input type="text" name="billTotal" id="billTotal" value="$0.00" readonly="readonly" />
+	    <label for="tip">Tip:</label>
+	    <input type="text" name="tip" id="tip" value="18%" readonly="readonly" />
+	    <label for="numPeople">Number of People:</label>
+	    <input type="text" name="numPeople" id="numPeople" value="1" readonly="readonly" />
+		</div>
+	</div>
+
+	<div id="numpad">
+		<div class="buttonRow">
+			<div class="buttonContainer"><a data-role="button" data-theme="a" class="numButton" id="button7">7</a></div>
+			<div class="buttonContainer"><a data-role="button" data-theme="a" class="numButton" id="button8">8</a></div>
+			<div class="buttonContainer"><a data-role="button" data-theme="a" class="numButton" id="button9">9</a></div>
+		</div>
+		<div class="buttonRow">
+			<div class="buttonContainer"><a data-role="button" data-theme="a" class="numButton" id="button4">4</a></div>
+			<div class="buttonContainer"><a data-role="button" data-theme="a" class="numButton" id="button5">5</a></div>
+			<div class="buttonContainer"><a data-role="button" data-theme="a" class="numButton" id="button6">6</a></div>
+		</div>
+		<div class="buttonRow">
+			<div class="buttonContainer"><a data-role="button" data-theme="a" class="numButton" id="button1">1</a></div>
+			<div class="buttonContainer"><a data-role="button" data-theme="a" class="numButton" id="button2">2</a></div>
+			<div class="buttonContainer"><a data-role="button" data-theme="a" class="numButton" id="button3">3</a></div>
+		</div>
+		<div class="buttonRow">
+			<div class="buttonContainer"><a data-role="button" data-theme="a" class="numButton" id="buttonDot">.</a></div>
+			<div class="buttonContainer"><a data-role="button" data-theme="a" class="numButton" id="button0">0</a></div>
+			<div class="buttonContainer"><a data-role="button" data-theme="a" class="numButton" id="buttonDel">del</a></div>
+		</div>
+	</div>
+
+
+</div> <!-- end of form page -->
+
+
+<!-- Results page -->
+
+<div data-role="page" id="simpleResults">
+
+	<div data-role="header">
+		<a id="backToForm">Back</a>
+		<h1>Simple Mode</h1>
+	</div><!-- /header -->
+
+	<div data-role="content">
+		<div id="resultsContent"></div>
+		<div id="old_results" style="display:none;">
+    <label for="tipAmount">Tip Amount:</label>
+    <input type="text" name="tipAmount" id="tipAmount" value="" readonly="readonly"  />
+	  <label for="totalWTip">Total with Tip:</label>
+	  <input type="text" name="totalWTip" id="totalWTip" value="" readonly="readonly"  />
+	  <label for="perPerson">Per Person with Tip:</label>
+	  <input type="text" name="perPerson" id="perPerson" value="" readonly="readonly"  />
+	</div>
+</div>
+</div> <!-- End of results page -->
+
+
+
+</body>
+
+<!-- Calculator JS -->
+
+  <script src="js/simple.js"></script>
+
+
+</html>
